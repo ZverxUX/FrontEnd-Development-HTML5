@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'Mont';
+  src: url("../fonts/Mont-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mont';
+  src: url("../fonts/Mont-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+*, html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16pt;
+  font-style: normal;
+  font-family: "Mont", sans-serif;
+  color: #212121;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+header {
+  background: #D71920;
+  min-height: 4rem;
+}
+
+header .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+header .header .logo {
+  height: 4rem;
+  width: 4rem;
+}
+
+header .header .logo a img {
+  max-height: 4rem;
+  max-width: 4rem;
+}
+
+header .header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0rem;
+  margin: 0rem;
+  list-style: none;
+}
+
+header .header nav ul li {
+  list-style: none;
+  margin: 0rem;
+}
+
+header .header nav ul li a {
+  padding: .75rem 1.5rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 12pt;
+}
+
+header .header nav ul li a:hover {
+  color: #CFD8DC;
+  text-decoration: none;
+}
+
+main {
+  min-height: calc( 100vh - 64px);
+  background: #FFFFFF;
+  color: #455A64;
+  display: block;
+  margin: 0 auto;
+}
+
+main section {
+  background: #D71920;
+  color: #FFFFFF;
+}
+
+main section .section-title {
+  max-width: 80%;
+  margin: auto;
+}
+
+main section .section-title h1 {
+  padding: 4rem 0;
+  font-size: 30pt;
+}
+
+main article {
+  background: #FFFFFF;
+  color: #607D8B;
+  max-width: 80%;
+  margin: 3rem auto;
+}
+
+main article h2 {
+  margin-bottom: 2rem;
+  font-size: 24pt;
+}
+
+footer {
+  background: #455A64;
+  min-height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+footer .copy {
+  max-width: 80%;
+  margin: auto;
+  font-size: 10pt;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=app.css.map */

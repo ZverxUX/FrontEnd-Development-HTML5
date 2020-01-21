@@ -1,0 +1,108 @@
+@import "variables";
+*, html {
+        margin: 0;
+        padding: 0;        
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+body {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 16pt;
+        font-style: normal;
+        font-family: $font-base;
+        color: $primary-text-color;
+        padding: 0;
+        margin:0;
+}
+p {
+        line-height: 1.75;
+        margin-bottom: 1rem;
+}
+header {
+        background: $accent-color;
+        min-height: 4rem;
+        .header {
+                display: flex;
+                align-items: center;
+                max-width: 80%;
+                margin: 0 auto;
+        .logo {
+                height: 4rem;
+                width: 4rem;
+                a {
+                        img {
+                                max-height: 4rem;
+                                max-width: 4rem;
+                        }
+                }
+        }
+        nav {
+                ul {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        padding: 0rem;
+                        margin: 0rem;
+                        list-style: none;
+                        li {
+                                list-style: none;
+                                margin: 0rem;
+                                a {
+                                        padding: .75rem 1.5rem;
+                                        color: $primary-color-text;
+                                        text-decoration: none;
+                                        font-size: 12pt;
+                                        &:hover {
+                                                color: $primary-color-light;
+                                                text-decoration: none;
+                                        }
+                                }
+                        }
+                }
+        }
+        }
+}
+main {
+        min-height: calc( 100vh - 64px );
+        background: $white;
+        color: $primary-color-dark;
+        display: block;
+        margin: 0 auto;
+        section {
+                background: $accent-color;
+                color: $primary-color-text;
+                .section-title {
+                        max-width: 80%;
+                        margin: auto;
+                        h1 {
+                                padding: 4rem 0;
+                                font-size: 30pt;
+                        }
+                }
+        }
+        article {
+                background: $primary-color-text;
+                color: $primary-color;
+                max-width: 80%;
+                margin: 3rem auto;
+                h2 {
+                        margin-bottom: 2rem;
+                        font-size: 24pt;
+                }
+        }
+}
+footer {
+        background: $primary-color-dark;
+        min-height: 4rem;
+        display: flex;
+        justify-content: flex-start;
+        .copy {
+                max-width: 80%;
+                margin: auto;
+                font-size: 10pt;
+                color: $primary-color-text;
+        }
+}

@@ -1,0 +1,37 @@
+//variables
+@font-face {
+        font-family: 'Mont';
+        src: url('../fonts/Mont-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Mont';
+        src: url('../fonts/Mont-Bold.woff2') format('woff2');
+        font-weight: bold;
+        font-style: normal;
+    }
+//body font
+$font-base: "Mont", sans-serif;
+//colors - using google color pallete generator
+$primary-color-dark:   #455A64;
+$primary-color:        #607D8B;
+$primary-color-light:  #CFD8DC;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #D71920;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$divider-color:        #BDBDBD;
+//colors - using 10 types of grey for all situations
+$white: #FFFFFF;
+$grey-100: #FEFEFE;
+$grey-200: #EEEEEE;
+$grey-300: #DBDBDB;
+$grey-400: #CECECE;
+$grey-500: #909090;
+$grey-600: #757575;
+$grey-700: #666666;
+$grey-800: #373737;
+$grey-900: #171717;
+$black: #000000;
