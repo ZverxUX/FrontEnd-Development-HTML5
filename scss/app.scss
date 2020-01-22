@@ -17,10 +17,110 @@ body {
         padding: 0;
         margin:0;
 }
+a {
+        color: $accent-color;
+        &:hover {
+                color: $primary-color-dark;
+        }
+}
 p {
         line-height: 1.75;
         margin-bottom: 1rem;
 }
+ul {
+        margin: 0 0 0 2rem;
+        padding: 0;
+}
+ul.list-styled {
+        list-style: none;
+        li {
+                text-indent: -27px;
+                list-style: none;
+                &:before {
+                        background: url(../assets/list-icon.png);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center center;
+                        margin-right: .5rem;
+                        width: 18px;
+                        height: 18px;
+                        display: inline-block;
+                        content: '';
+                
+                }
+        }
+}
+img {
+        max-width: 100%;
+}
+figure {
+        padding: 0;
+        figcaption {
+                background: $accent-color;
+                color: $primary-color-text;
+                margin: -.25rem 0 0;
+                padding: .45rem 1.5rem;
+                font-size: 12pt;
+        }
+}
+audio, video {
+        max-width: 720px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+}
+hr {
+        padding-top: 1rem;
+        margin-bottom: 1.5rem;
+        border-top: 2px solid $divider-color;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+}
+.table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: $primary-color;
+        background-color: $primary-color-text;
+        font-size: 12pt;
+        td {
+                padding: .5rem;
+                vertical-align: top;
+                border-top: 1px solid $divider-color;
+        }
+
+        thead th {
+                vertical-align: bottom;
+                border-bottom: 2px solid $primary-color;
+                font-weight: normal;
+                color: $accent-color;
+                text-align: left;
+                padding: .5rem;
+        }
+
+        &.table-striped {
+                tbody tr:nth-of-type(odd) {
+                        background-color: $grey-200;
+                }
+        }
+        tfoot {
+                td {
+                        text-align: right;
+                        font-weight: bold;
+                }
+        }
+}
+
+.table-responsive {
+table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+}
+}
+
 header {
         background: $accent-color;
         min-height: 4rem;
@@ -71,7 +171,7 @@ main {
         color: $primary-color-dark;
         display: block;
         margin: 0 auto;
-        section {
+        >section {
                 background: $accent-color;
                 color: $primary-color-text;
                 .section-title {
@@ -91,6 +191,36 @@ main {
                 h2 {
                         margin-bottom: 2rem;
                         font-size: 24pt;
+                }
+                section {
+                        border-bottom: 1px solid $divider-color;
+                        padding: 3rem 0;
+                        &.flex {
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: space-between;
+                                figure {
+                                        width: 20%;
+                                }
+                                article {
+                                        width: 80%;
+                                        padding: 0rem 3rem;
+                                        margin: 0 auto;
+                                }
+                                
+                        }
+                        &.flexBox {
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: space-between;
+                                p {
+                                        padding: 1rem 4rem;
+                                        width: 40%;
+                                }
+                                figure {
+                                        width: 20%;
+                                }
+                        }
                 }
         }
 }
