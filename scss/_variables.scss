@@ -1,4 +1,13 @@
 //variables
+
+// Variables Width
+$mediawidth: 750px;
+$defaultwidth: 1200px;
+$alignwide: 80%;
+$fullwidth: 100%;
+$borderradius: 50%;
+
+// Included self hosted Font Family "Mont"
 @font-face {
         font-family: 'Mont';
         src: url('../fonts/Mont-Regular.woff2') format('woff2');
@@ -12,7 +21,7 @@
         font-weight: bold;
         font-style: normal;
     }
-//body font
+//Defind Web Font Family - Implemented local hosted
 $font-base: "Mont", sans-serif;
 //colors - using google color pallete generator
 $primary-color-dark:   #455A64;

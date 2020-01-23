@@ -86,7 +86,7 @@ figure figcaption {
 }
 
 audio, video {
-  max-width: 720px;
+  max-width: 750px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,13 +138,6 @@ hr {
 .table tfoot td {
   text-align: right;
   font-weight: bold;
-}
-
-.table-responsive table {
-  display: block;
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 header {
@@ -206,7 +199,7 @@ header .header nav ul li a:hover {
 }
 
 main {
-  min-height: calc( 100vh - 64px);
+  min-height: calc( 100vh - 244px);
   background: #FFFFFF;
   color: #455A64;
   display: block;
@@ -219,13 +212,16 @@ main > section {
 }
 
 main > section .section-title {
-  max-width: 80%;
+  background: #455A64;
+  max-width: 100%;
   margin: auto;
 }
 
 main > section .section-title h1 {
-  padding: 4rem 0;
+  width: 80%;
+  padding: 5rem 0 1rem;
   font-size: 30pt;
+  margin: auto;
 }
 
 main article {
@@ -297,12 +293,81 @@ footer {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  margin: auto;
+}
+
+footer .footer-links nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer-links nav ul li {
+  margin: 1rem;
+}
+
+footer .footer-links nav ul li a {
+  color: #BDBDBD;
+  font-size: .85rem;
+  text-decoration: none;
+}
+
+footer .footer-links nav.links {
+  margin-right: auto;
 }
 
 footer .copy {
-  max-width: 80%;
-  margin: auto;
   font-size: 10pt;
-  color: #FFFFFF;
+  color: #BDBDBD;
+  padding: 1rem;
+  margin-left: auto;
+}
+
+nav.social {
+  margin-left: auto;
+}
+
+nav.social ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+nav.social ul li a img {
+  width: 36px;
+  height: 36px;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  background: #FFFFFF;
+  padding: 2px;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=app.css.map */
