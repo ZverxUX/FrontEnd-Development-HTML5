@@ -331,6 +331,36 @@ main article section.different {
   margin-bottom: 3rem;
 }
 
+main.stevan {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main.stevan section {
+  width: 100%;
+  margin: 3rem 0;
+  padding: 3rem;
+}
+
+main.stevan section.section-title {
+  background: #d71920;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 5rem 3rem 1rem;
+}
+
+main.stevan section.section-title h1 {
+  color: #FFFFFF;
+}
+
 footer {
   background: #455A64;
   width: 80%;

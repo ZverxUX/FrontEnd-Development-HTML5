@@ -252,6 +252,25 @@ main {
             }
         }
     }
+    &.stevan {
+        flex-direction: column;
+        justify-content: flex-start;
+        section {
+            width: $fullwidth;
+            margin: 3rem 0;
+            padding: 3rem;
+            &.section-title {
+                background: $accent-color;
+                flex: 0 1 $fullwidth;
+                max-width: $fullwidth;
+                margin: 0;
+                padding: 5rem 3rem 1rem;
+                h1 {
+                    color: $white;
+                }
+            }
+        }
+    }
 }
 footer {
     background: $primary-color-dark;
