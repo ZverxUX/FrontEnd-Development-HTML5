@@ -7,15 +7,18 @@
         box-sizing: border-box;
 }
 body {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        font-size: 16pt;
-        font-style: normal;
-        font-family: $font-base;
-        color: $primary-text-color;
-        padding: 0;
-        margin:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16pt;
+    font-style: normal;
+    font-family: $font-base;
+    color: $primary-text-color;
+    padding: 0;
+    margin:0;
+    background: url("../images/body-bg.png") repeat;
+    background-attachment: fixed;
+    background-size: content;
 }
 a {
         color: $accent-color;
@@ -81,25 +84,27 @@ hr {
     width: $fullwidth;
     margin-bottom: 1rem;
     color: $primary-color;
-    background-color: $primary-color-text;
+    border-collapse: collapse;
+    
     font-size: 12pt;
-    td {
-        padding: .5rem;
+    th, td {
         vertical-align: top;
-        border-top: 1px solid $divider-color;
-    }
-    thead th {
-        vertical-align: bottom;
-        border-bottom: 2px solid $primary-color;
         font-weight: normal;
-        color: $accent-color;
         text-align: left;
         padding: .5rem;
+        border-bottom: 1px solid $divider-color;
+    }
+    thead th {
+        border-bottom: 2px solid $primary-color;
+        color: $accent-color;
     }
 
     &.table-striped {
         tbody tr:nth-of-type(odd) {
             background-color: $grey-200;
+        }
+        tbody tr:nth-of-type(even) {
+            border-bottom: 1px solid $divider-color;
         }
     }
     tfoot {
@@ -111,12 +116,15 @@ hr {
 }
 
 header {
-    background: $accent-color;
+    background: rgba(215,25,32,.98);
     min-height: 4rem;
+    width: $alignwide;
+    margin: auto;
     .header {
         display: flex;
         align-items: center;
-        max-width: 80%;
+        max-width: $fullwidth;
+        padding: 0 3rem;
         margin: 0 auto;
         .logo {
             height: 4rem;
@@ -153,80 +161,112 @@ header {
             }
         }
     }
+    .page-title {
+        background: $primary-color-dark;
+        color: $primary-color-text;
+        max-width: 100%;
+        margin: auto;
+        h1 {
+            max-width: $fullwidth;
+            padding: 5rem 3rem 1rem;
+            font-size: 30pt;
+            margin: auto;
+        }
+    }
 }
 
 main {
+    width: $alignwide;
     min-height: calc( 100vh - 244px );
     background: $white;
     color: $primary-color-dark;
     display: block;
     margin: 0 auto;
-    >section {
-        background: $accent-color;
-        color: $primary-color-text;
-        .section-title {
-            background: $primary-color-dark;
-            max-width: 100%;
-            margin: auto;
-            h1 {
-                width: 80%;
-                padding: 5rem 0 1rem;
-                font-size: 30pt;
-                margin: auto;
+    display: flex;
+    justify-content: space-between;
+    
+    aside {
+        order: 1;
+        display: flex;
+        flex: 0 1 $alignsidebar;
+        max-width: $alignsidebar;
+        margin-top: 3rem;
+        nav {
+            ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0rem;
+                margin: 0rem;
+                list-style: none;
+                li {
+                    list-style: none;
+                    margin: 0rem;
+                    border-bottom: 1px solid $divider-color;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        padding: 1rem 1.5rem;
+                        color: $accent-color;
+                        text-decoration: none;
+                        &:hover {
+                            color: $primary-color-dark;
+                            text-decoration: none;
+                        }
+                        i {
+                            margin-right: .5rem;
+                        }
+                    }
+                    &.active {
+                        a {
+                            color: $primary-color;
+                        }
+                    }
+                }
             }
         }
     }
     article {
+        order: 2;
         background: $primary-color-text;
         color: $primary-color;
-        max-width: 80%;
-        margin: 3rem auto;
+        padding: 0 3rem;
+        margin: 3rem auto 0;
+        flex: 0 1 $alignwide;
+        max-width: $alignwide;
         h2 {
             margin-bottom: 2rem;
             font-size: 24pt;
         }
+        figure {
+            max-width: 25%;
+            float: left;
+            padding-right: 1rem;
+            margin-right: 1rem;
+        }
         section {
-            border-bottom: 1px solid $divider-color;
-            padding: 3rem 0;
-            &.flex {
-                display: flex;
-                align-items: flex-start;
-                justify-content: space-between;
-                figure {
-                    width: 20%;
-                }
-                article {
-                    width: 80%;
-                    padding: 0rem 3rem;
-                    margin: 0 auto;
-                }
-                    
-            }
-            &.flexBox {
-                display: flex;
-                align-items: flex-start;
-                justify-content: space-between;
-                p {
-                    padding: 1rem 4rem;
-                    width: 40%;
-                }  
-                figure {
-                    width: 20%;
-                }
+            padding: 3rem;
+            &.different {
+                background-color: rgba(150,150,150,.125);
+                margin-bottom: 3rem;
             }
         }
     }
 }
 footer {
     background: $primary-color-dark;
+    width: $alignwide;
+    margin: auto;
     min-height: 4rem;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
     .footer-links {
         display: flex;
         flex-direction: row;
-        width: $alignwide;
+        width: $fullwidth;
+        padding: 0 3rem;
         margin: auto;
         nav {
             ul {
@@ -249,7 +289,7 @@ footer {
         }
     }
     .copy {
-        font-size: 10pt;
+        font-size: .85rem;
         color: $divider-color;
         padding: 1rem;
         margin-left: auto;
